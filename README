@@ -1,0 +1,6 @@
+playonly takes a ros bag file, and remaps all parameters other than specified to a /null/ namespace
+
+Usage: rosbag <other rosbag params> `playonly <bagfile> /topic1 /topic2 ... /topicN`
+
+Example: rosbag play `playonly.py run2_2018-09-12-21-20-23.bag /scan /tf` 
+                will only publish /scan and /tf under their original topic names.
