@@ -2,5 +2,29 @@ playonly takes a ros bag file, and remaps all parameters other than specified to
 
 Usage: rosbag <other rosbag params> `playonly <bagfile> /topic1 /topic2 ... /topicN`
 
-Example: rosbag play `playonly.py run2_2018-09-12-21-20-23.bag /scan /tf` 
-                will only publish /scan and /tf under their original topic names.
+Example: 
+
+terminal 1: rosbag play `playonly.py run2_2018-09-12-21-20-23.bag /scan /tf` 
+terminal 2: rostopic list
+    /clock
+    /null/caddy_ctrl/bob_1
+    /null/caddy_ctrl/tick
+    /null/joint_states
+    /null/map
+    /null/rosout
+    /null/rosout_agg
+    /null/scan_matched_points2
+    /null/submap_list
+    /null/tf_static
+    /null/trajectory_nodes_list
+    /odom
+    /rosout
+    /rosout_agg
+    /scan
+    /tf
+
+Install:
+Too much effort to upload to PyPI, rather:
+
+$ git clone https://github.com/neomanic/rosbag_playonly
+$ sudo pip install rosbag_playonly
